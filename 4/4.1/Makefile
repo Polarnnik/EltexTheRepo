@@ -12,3 +12,4 @@ main: $(OBJS)
 
 clean:
 	rm -f $(OBJS) $(TARGET)
+
