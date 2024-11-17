@@ -22,7 +22,7 @@ void readInput(char *buffer, int length) {
     fgets(buffer, length, stdin);
     size_t len = strlen(buffer);
     if (len > 0 && buffer[len - 1] == '\n') {
-        buffer[len - 1] = '\0';  
+        buffer[len - 1] = '\0';
     }
 }
 
@@ -81,12 +81,12 @@ void deleteContact() {
     int index;
     printf("Введите номер контакта для удаления: ");
     scanf("%d", &index);
-    getchar();  
+    getchar();
     if (index < 1 || index > contactCount) {
         printf("Некорректный номер контакта.\n");
         return;
     }
-    
+
     for (int i = index - 1; i < contactCount - 1; i++) {
         contacts[i] = contacts[i + 1];
     }
@@ -98,12 +98,12 @@ void editContact() {
     int index;
     printf("Введите номер контакта для редактирования: ");
     scanf("%d", &index);
-    getchar();  
+    getchar();
     if (index < 1 || index > contactCount) {
         printf("Некорректный номер контакта.\n");
         return;
     }
-    
+
     Contact *contact = &contacts[index - 1];
     printf("Редактирование контакта %d:\n", index);
 
@@ -129,7 +129,7 @@ void editContact() {
 
 int main() {
     int choice;
-    
+
     while (1) {
         printf("\nТелефонная книга:\n");
         printf("1. Добавить контакт\n");
@@ -139,7 +139,7 @@ int main() {
         printf("5. Выйти\n");
         printf("Выберите действие: ");
         scanf("%d", &choice);
-        getchar();  
+        getchar();
 
         switch (choice) {
             case 1:
